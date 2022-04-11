@@ -1,0 +1,10 @@
+{
+  "name": "react-library",
+  "version": "0.1",
+  "description": "A library of React components, hooks, and other utilities that are used in RebelCode's projects",
+  "main": "index.js",
+  "repository": "https://github.com/rebelcode/react-library",
+  "author": "RebelCode <dev@rebelcode.com>",
+  "license": "GPL-3.0",
+  "private": false
+}
