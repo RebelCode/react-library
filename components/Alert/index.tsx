@@ -50,7 +50,7 @@ export function Alert({
     centered && css.centered,
     className
   );
-
+  
   return dismissed ? null : (
     <div className={fullClassName} style={style}>
       {showIcon && (

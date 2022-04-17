@@ -1,4 +1,5 @@
 import React, {ChangeEvent} from "react";
+import "../../styles/fields.pcss";
 import css from "./RadioGroup.pcss";
 
 export type RadioOption = {

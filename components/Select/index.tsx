@@ -2,8 +2,9 @@ import React, {MutableRefObject, ReactElement} from "react";
 import ReactSelect from "react-select";
 import CreatableSelect from "react-select/creatable";
 import AsyncSelect from "react-select/async";
-import css from "./Select.scss";
 import {classList} from "../../utils/classes";
+import "../../styles/fields.pcss";
+import css from "./Select.pcss";
 
 export type SelectOption = {
     value: any;
