@@ -1,4 +1,4 @@
-.message {
+.alert {
   align-items: stretch;
   justify-content: center;
   position: relative;
@@ -56,7 +56,7 @@
   display: block;
 }
 
-.dismiss-btn {
+.dismissBtn {
   position: absolute;
   top: 5px;
   right: 7px;
@@ -66,6 +66,7 @@
   border-radius: 100px;
   background: transparent;
   box-sizing: border-box;
+  cursor: pointer;
   opacity: 0.5;
 
   &:hover {
@@ -101,7 +102,7 @@
 
 /* SUCCESS */
 .success {
-  composes: message;
+  composes: alert;
   background: #ecf4eb;
   box-shadow: 0 1px 2px rgba(37, 85, 31, 0.15);
   border-color: rgba(61, 142, 52, 0.4);
@@ -117,7 +118,7 @@
 
 /* INFO */
 .info {
-  composes: message;
+  composes: alert;
   background: #e8f5f7;
   box-shadow: 0 1px 2px rgba(14, 91, 107, 0.15);
   border-color: rgba(24, 152, 178, 0.4);
@@ -133,7 +134,7 @@
 
 /* WARNING */
 .warning {
-  composes: message;
+  composes: alert;
   background: #fff4e6;
   box-shadow: 0 1px 2px rgba(153, 88, 0, 0.15);
   border-color: rgba(255, 147, 0, 0.4);
@@ -149,12 +150,12 @@
 
 /* PREMIUM */
 .premium {
-  composes: message;
+  composes: alert;
   background: rgba(221, 35, 75, .1);
-  border-color: var(--sli-pro);
+  border-color: #dd224B;
 
   & .icon, & .dismiss-btn, & .content {
-    color: var(--sli-quasi-black);
+    color: #202225;
   }
 
   & a {
@@ -164,8 +165,8 @@
 }
 
 /* PRO TIP */
-.pro-tip {
-  composes: message;
+.proTip {
+  composes: alert;
   background: #eeeffa;
   box-shadow: 0 1px 2px rgba(53, 57, 123, 0.15);
   border-color: rgba(89, 95, 205, 0.4);
@@ -181,7 +182,7 @@
 
 /* ERROR */
 .error {
-  composes: message;
+  composes: alert;
   background: #fbe9ec;
   box-shadow: 0 1px 2px rgba(130, 22, 40, 0.15);
   border-color: rgba(216, 36, 66, 0.4);
@@ -198,10 +199,10 @@
 
 /* GREY */
 .grey {
-  composes: message;
-  background: var(--sli-wp-grey);
+  composes: alert;
+  background: #f1f1f1;
   box-shadow: 0 1px 2px rgba(120, 120, 120, 0.15);
-  border-color: var(--sli-line-color);
+  border-color: #d3d8dc;
 
   & .icon, & .dismiss-btn {
     color: #555;

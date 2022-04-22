@@ -2,6 +2,8 @@ import React, { CSSProperties, ReactNode } from "react";
 import css from "./Alert.pcss";
 import { classList } from "../../utils/classes";
 import { Dashicon, DashiconTy } from "../Dashicon";
+import {Icon} from "../Icon"
+import {CloseIcon} from "../Icon/CloseIcon"
 
 type AlertType =
   | "success"
@@ -61,7 +63,7 @@ export function Alert({
 
       {isDismissible && (
         <button className={css.dismissBtn} onClick={handleClick}>
-          <Dashicon icon="no" className={css.dashicon} />
+          <Icon icon={CloseIcon} size={16} />
         </button>
       )}
     </div>
