@@ -16,10 +16,10 @@ export function useEventListener<E extends Event>(
 ) {
     useEffect(() => {
         if (when.reduce((p, c) => p && c, true)) {
-            subject.addEventListener(type, listener);
+            subject.addEventListener(type, listener as any);
         }
 
-        return () => subject.removeEventListener(type, listener);
+        return () => subject.removeEventListener(type, listener as any);
     }, deps);
 }
 
