@@ -1,4 +1,6 @@
-export function colorToString(color) {
+import { Color } from "react-color-types";
+
+export function colorToString(color: Color) {
     if (typeof color === "string") {
         return color;
     }

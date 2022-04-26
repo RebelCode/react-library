@@ -1,13 +1,15 @@
-export function mergeRefs(...refs) {
-    return (el) => {
+import { Ref, RefObject } from "react";
+
+export function mergeRefs(...refs: Ref<any>[]) {
+    return (el: any) => {
         refs.forEach((ref) => ref && setRef(ref, el));
     };
 }
 
-function setRef(ref, el) {
+function setRef(ref: ((instance: any) => void) | RefObject<any>, el: any) {
     if (typeof ref === "function") {
         ref(el);
     } else {
-        ref.current = el;
+        (ref as any).current = el;
     }
 }
