@@ -1,4 +1,5 @@
 {
+  "rootDir": ".",
   "compilerOptions": {
     "target": "es5",
     "outDir": "lib",
@@ -7,8 +8,6 @@
       "dom.iterable",
       "esnext"
     ],
-    "declaration": true,
-    "declarationDir": "lib",
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -23,7 +22,10 @@
     "jsx": "react"
   },
   "include": [
-    "src"
+    "components",
+    "declarations.d.ts",
+    "*.ts",
+    "**/*.tsx",
   ],
   "exclude": [
       "node_modules",
