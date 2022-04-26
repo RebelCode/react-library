@@ -5,25 +5,27 @@ import {Manager, Popper, Reference} from "react-popper"
 import {DualPopperChildren, Placement} from "popper"
 import {classList} from "../../utils/classes"
 
+type ThemeProp = {
+  root?: string,
+  content?: string,
+  container?: string,
+  containerTop?: string,
+  containerBottom?: string,
+  containerLeft?: string,
+  containerRight?: string;
+  arrow?: string,
+  arrowTop?: string,
+  arrowBottom?: string,
+  arrowLeft?: string,
+  arrowRight?: string,
+}
+
 type Props = {
   visible: boolean;
   delay?: number;
   children: DualPopperChildren;
   placement?: Placement;
-  theme?: {
-    root?: string,
-    content?: string,
-    container?: string,
-    containerTop?: string,
-    containerBottom?: string,
-    containerLeft?: string,
-    containerRight?: string;
-    arrow?: string,
-    arrowTop?: string,
-    arrowBottom?: string,
-    arrowLeft?: string,
-    arrowRight?: string,
-  };
+  theme?: ThemeProp;
 }
 
 export default function Tooltip({visible, delay, placement, theme, children}: Props) {
@@ -49,14 +51,14 @@ export default function Tooltip({visible, delay, placement, theme, children}: Pr
   const arrowClassKey = getAlignedClass("arrow", placement)
 
   const containerClass = classList(
-    css[containerClassKey],
-    theme.container,
-    theme[containerClassKey],
+    (css as any)[containerClassKey],
+    theme.container as string,
+    (theme as any)[containerClassKey],
   )
   const arrowClass = classList(
-    css[arrowClassKey],
-    theme.arrow,
-    theme[arrowClassKey],
+    (css as any)[arrowClassKey],
+    theme.arrow as string,
+    (theme as any)[arrowClassKey],
   )
 
   return (
@@ -70,11 +72,11 @@ export default function Tooltip({visible, delay, placement, theme, children}: Pr
             ReactDOM.createPortal(
               <div
                 ref={ref}
-                className={classList(css.root, theme.root)}
+                className={classList(css.root, theme!.root as string)}
                 style={style}
                 tabIndex={-1}>
                 <div className={containerClass} data-placement={placement}>
-                  <div className={classList(css.content, theme.content)}>
+                  <div className={classList(css.content, theme!.content as string)}>
                     {children[1]}
                   </div>
                   <div

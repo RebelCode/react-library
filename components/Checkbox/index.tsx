@@ -5,7 +5,7 @@ type Props = {
     id?: string;
     value?: boolean;
     disabled?: boolean;
-    onChange?: (value: boolean) => void;
+    onChange: (value: boolean) => void;
 }
 
 export function Checkbox({id, value, onChange, disabled}: Props) {

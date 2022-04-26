@@ -13,7 +13,7 @@ export default {
 } as ComponentMeta<typeof OrSeparator>;
 
 const Template: ComponentStory<typeof OrSeparator> = (args) => (
-  <OrSeparator {...args} />
+  <OrSeparator />
 );
 
 export const Initial = Template.bind({});

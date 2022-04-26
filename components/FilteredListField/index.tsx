@@ -2,7 +2,7 @@ import React from "react";
 import {ListField, Props as InnerProps} from "../ListField";
 
 export interface Props extends InnerProps {
-    filter?: Function;
+    filter: Function;
     excludeMsg?: string;
 }
 
@@ -15,7 +15,7 @@ export function FilteredListField(props: Props) {
     // TODO: fix come back n fix this
     const onChange = (values: Array<string>) => {
         const excludedIdx = props.filter ?
-            values.findIndex((val) => props.filter(s => !values.includes(val)))
+            values.findIndex((val) => props.filter((s:string) => !values.includes(s)))
             
             // values.findIndex((val) => props.exclude.includes(val))
             : -1;
@@ -30,10 +30,10 @@ export function FilteredListField(props: Props) {
     let message = undefined;
     if (excluded.length > 0) {
         const token = "%s";
-        const tokenIdx = props.excludeMsg.indexOf("%s");
+        const tokenIdx = props.excludeMsg && props.excludeMsg.indexOf("%s");
 
-        const before = props.excludeMsg.substring(0, tokenIdx);
-        const after = props.excludeMsg.substring(tokenIdx + token.length);
+        const before = props.excludeMsg && props.excludeMsg.substring(0, tokenIdx as number);
+        const after = props.excludeMsg&&props.excludeMsg.substring((tokenIdx as number) + token.length);
 
         message = <>{before}<code>{excluded}</code>{after}</>;
     }

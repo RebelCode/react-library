@@ -1,4 +1,4 @@
-import React, {MutableRefObject, ReactElement} from "react";
+import React, {ForwardedRef, MutableRefObject, ReactElement} from "react";
 import ReactSelect from "react-select";
 import CreatableSelect from "react-select/creatable";
 import AsyncSelect from "react-select/async";
@@ -32,21 +32,21 @@ type Props = {
 }
 
 export const SelectStyles = (props: Record<string, any> = {}) => ({
-    option: (prev, state) => ({
+    option: (prev: any, state: any) => ({
         ...prev,
         cursor: "pointer",
         lineHeight: "24px",
     }),
-    menu: (prev, state) => ({
+    menu: (prev: any, state: any) => ({
         ...prev,
         margin: "6px 0",
         boxShadow: "0 2px 8px " + css.shadowColor,
         overflow: "hidden",
     }),
-    menuList: (prev, state) => ({
+    menuList: (prev: any, state: any) => ({
         padding: "0px",
     }),
-    control: (prev, state) => {
+    control: (prev: any, state: { isFocused: any; }) => {
         let style = {
             ...prev,
             cursor: "pointer",
@@ -61,45 +61,45 @@ export const SelectStyles = (props: Record<string, any> = {}) => ({
 
         return style;
     },
-    valueContainer: (prev, state) => ({
+    valueContainer: (prev: any, state: any) => ({
         ...prev,
         paddingTop: 0,
         paddingBottom: 0,
         paddingRight: 0,
     }),
-    container: (prev, state) => ({
+    container: (prev: any, state: any) => ({
         ...prev,
         width: props.width || "100%",
     }),
-    multiValue: (prev, state) => ({
+    multiValue: (prev: any, state: any) => ({
         ...prev,
         padding: "0 6px",
     }),
-    input: (prev, state) => ({
+    input: (prev: any, state: any) => ({
         ...prev,
         outline: "0 transparent !important",
         border: "0 transparent !important",
         boxShadow: "0 0 0 transparent !important",
     }),
-    indicatorSeparator: (prev, state) => ({
+    indicatorSeparator: (prev: any, state: any) => ({
         ...prev,
         margin: "0",
         backgroundColor: "transparent",
     }),
-    menuPortal: base => ({
+    menuPortal: (base: any) => ({
         ...base,
         zIndex: 9999999
     })
 });
 
-export const Select = React.forwardRef<HTMLElement, Props>((props: Props, ref: MutableRefObject<HTMLElement>) => {
+export const Select = React.forwardRef<HTMLElement, Props>((props: Props, ref: ForwardedRef<HTMLElement>) => {
     const options = props.options ?? [];
     const value = options.find((opt) => opt.value === props.value);
 
     props = {
         ...props,
         id: undefined,
-        className: classList("react-select", props.className),
+        className: classList("react-select", props.className as string),
         classNamePrefix: "react-select",
         inputId: props.id,
         menuPosition: "absolute",
@@ -107,7 +107,7 @@ export const Select = React.forwardRef<HTMLElement, Props>((props: Props, ref: M
 
     const styles = SelectStyles(props);
 
-    const theme = (theme) => ({
+    const theme = (theme: { colors: any; }) => ({
         ...theme,
         borderRadius: 3,
         colors: {

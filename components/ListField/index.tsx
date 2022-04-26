@@ -15,7 +15,7 @@ const createOption = (label: string) => ({
 export type Props = {
     id?: string;
     value: Array<string>;
-    onChange?: (value: Array<string>) => void;
+    onChange: (value: Array<string>) => void;
     sanitize?: (value: string) => string;
     autoFocus?: boolean;
     message?: string | ReactElement;
@@ -49,8 +49,8 @@ export function ListField({id, value, onChange, sanitize, autoFocus, message}: P
             value = [];
         } else {
             value = value
-                .map((opt) => (opt && sanitize) ? sanitize(opt.value) : opt.value)
-                .filter((val, idx, list) => {
+                .map((opt: { value: string; }) => (opt && sanitize) ? sanitize(opt.value) : opt.value)
+                .filter((val: any, idx: any, list: string | any[]) => {
                     const firstIndex = list.indexOf(val);
 
                     if (firstIndex !== idx) {
@@ -111,7 +111,7 @@ export function ListField({id, value, onChange, sanitize, autoFocus, message}: P
             />
             {
                 (duplicate < 0 || values.length === 0) ? null : (
-                    <Alert type={MessageType.WARNING} shake={true} showIcon={true} isDismissible={true}>
+                    <Alert type="warning" shake={true} showIcon={true} isDismissible={true}>
                         <code>{values[duplicate].label}</code> is already in the list
                     </Alert>
                 )

@@ -1,5 +1,5 @@
 import React, {ChangeEvent} from "react";
-import "../../styles/fields.pcss";
+// import "../../styles/fields.pcss";
 import css from "./RadioGroup.pcss";
 
 export type RadioOption = {
@@ -11,7 +11,7 @@ type Props = {
     name?: string;
     className?: string;
     value: string | number;
-    onChange?: (value) => void;
+    onChange?: (value: any) => void;
     options: Array<RadioOption>;
     disabled?: boolean;
 }

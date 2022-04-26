@@ -46,9 +46,9 @@ export function Alert({
 
   const fullClassName = classList(
     css[type],
-    shake && css.shaking,
-    centered && css.centered,
-    className
+    (shake && css.shaking||""),
+   ( centered && css.centered||""),
+    className as string
   );
   
   return dismissed ? null : (

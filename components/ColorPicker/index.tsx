@@ -1,4 +1,4 @@
-import React, {useEffect} from "react"
+import React, {MutableRefObject, useEffect} from "react"
 import css from "./ColorPicker.pcss"
 import ChromePicker from "react-color/lib/components/chrome/Chrome"
 import {Color, MultiColor} from "react-color-types"
@@ -27,8 +27,8 @@ export function ColorPicker({id, value, disableAlpha, onChange}: Props) {
   const close = React.useCallback(() => setOpen(false), [])
   const toggle = React.useCallback(() => setOpen(v => !v), [])
 
-  const handleChange = React.useCallback((color) => {
-    document.getSelection().removeAllRanges()
+  const handleChange = React.useCallback((color: MultiColor) => {
+    document.getSelection() && (document.getSelection() as Selection).removeAllRanges()
     setColor(color.rgb)
     onChange && onChange(color)
   }, [onChange])
@@ -41,9 +41,9 @@ export function ColorPicker({id, value, disableAlpha, onChange}: Props) {
     }
   }, [isOpen])
 
-  useEffect(() => setColor(value), [value])
-  useDetectOutsideClick(btn, close, [picker])
-  useDetectTabOut([btn, picker], close)
+  useEffect(() => setColor(value as Color), [value])
+  useDetectOutsideClick(btn as any, close, [picker as any])
+  useDetectTabOut([btn as any, picker], close)
   useDocumentEventListener<KeyboardEvent>("keydown", onKeyDown, [isOpen])
 
   const modifiers = {
