@@ -1,7 +1,16 @@
 declare module "*.scss";
 declare module "*.css";
 declare module "*.pcss";
+declare module "*.pcss.d.ts";
 
+declare module '*.pcss' {
+    const content: Record<string, string>;
+    export default content;
+}
+
+declare module 'react-select';
+declare module 'react-select/async'
+declare module 'react-select/creatable'
 declare module "react-color-types" {
     export interface HSLColor {
         a?: number;
