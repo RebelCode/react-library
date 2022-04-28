@@ -61,8 +61,10 @@ export function ColorPicker({id, value, disableAlpha, onChange}: Props) {
             ref={mergeRefs(btn, ref)}
             id={id}
             className={css.button}
-            onClick={toggle}>
-            <span className={css.colorPreview} style={{backgroundColor: colorToString(color)}} />
+            onClick={toggle}
+            
+            >
+            <span data-testid="colorpicker" className={css.colorPreview} style={{backgroundColor: colorToString(color)}} />
           </button>
         )}
       </Reference>

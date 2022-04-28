@@ -13,6 +13,7 @@ export function TextArea({id, value, onChange}: Props) {
         <textarea
             id={id}
             value={value}
+            data-testid="textarea"
             onChange={(e) => onChange(e.target.value)}
         />
     );

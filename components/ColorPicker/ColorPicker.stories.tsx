@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-
+import { within, userEvent } from '@storybook/testing-library';
 import { ColorPicker } from "./index";
 
 export default {
@@ -21,3 +21,10 @@ Picker.args = {
   value: 'blue'
 };
 
+export const ShowPicker = Template.bind({});
+ShowPicker.play = async ({ canvasElement }) => {
+  // Starts querying the component from its root element
+  const canvas = within(canvasElement);
+
+  await userEvent.click(canvas.getByTestId('colorpicker'))
+};

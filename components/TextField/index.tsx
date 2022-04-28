@@ -15,6 +15,7 @@ export function TextField({id, value, onChange, placeholder}: Props) {
             type="text"
             value={value}
             onChange={(e) => onChange(e.target.value)}
+            data-testid="textfield"
             placeholder={placeholder}
         />
     );
