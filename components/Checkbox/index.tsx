@@ -10,7 +10,7 @@ type Props = {
 
 export function Checkbox({id, value, onChange, disabled}: Props) {
     return (
-        <FlexRow>
+        <FlexRow aria-label="Checkbox">
             <FlexColumn>
                 <input
                     id={id}

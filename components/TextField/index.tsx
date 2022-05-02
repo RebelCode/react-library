@@ -16,6 +16,7 @@ export function TextField({id, value, onChange, placeholder}: Props) {
             value={value}
             onChange={(e) => onChange(e.target.value)}
             data-testid="textfield"
+            aria-label="TextField"
             placeholder={placeholder}
         />
     );

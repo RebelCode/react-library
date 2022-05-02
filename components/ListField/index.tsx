@@ -108,6 +108,7 @@ export function ListField({id, value, onChange, sanitize, autoFocus, message}: P
                 value={values}
                 autoFocus={autoFocus}
                 styles={styles}
+                aria-label="ListField"
             />
             {
                 (duplicate < 0 || values.length === 0) ? null : (

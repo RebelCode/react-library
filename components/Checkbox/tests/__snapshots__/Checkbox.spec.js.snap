@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox should take a snapshot 1`] = `
+<DocumentFragment>
+  <div
+    aria-label="Checkbox"
+    style="display: flex; flex-flow: row nowrap; justify-content: flex-start; align-items: center;"
+  >
+    <div
+      aria-label="FlexColumn"
+      style="display: flex; flex-flow: column nowrap; justify-content: flex-start; align-items: center;"
+    >
+      <input
+        type="checkbox"
+        value="1"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

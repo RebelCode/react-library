@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextArea should take a snapshot 1`] = `
+<DocumentFragment>
+  <textarea
+    aria-label="TextArea"
+    data-testid="textarea"
+  />
+</DocumentFragment>
+`;

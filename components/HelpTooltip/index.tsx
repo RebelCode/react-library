@@ -25,7 +25,7 @@ export default function HelpTooltip({maxWidth, children}: Props) {
     const all = classList(css.icon, isTooltipVisible ? css.iconVisible : css.iconNotvisible) 
 
     return (
-        <div className={css.root}>
+        <div className={css.root}  aria-label="HelpTooltip">
             <Tooltip visible={isTooltipVisible} theme={tooltipTheme}>
                 {
                     ({ref}) => (

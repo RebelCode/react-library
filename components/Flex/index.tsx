@@ -42,6 +42,6 @@ export const Flex = forwardRef<HTMLDivElement, FlexProps>(
 type PropsWithoutDir = Omit<FlexProps, "dir">
 
 // @ts-ignore
-export const FlexColumn = (props: PropsWithoutDir) => <Flex dir="column" {...props} />
+export const FlexColumn = (props: PropsWithoutDir) => <Flex dir="column" aria-label="FlexColumn"  {...props} />
 // @ts-ignore
-export const FlexRow = (props: PropsWithoutDir) => <Flex dir="row" {...props} />
+export const FlexRow = (props: PropsWithoutDir) => <Flex dir="row" aria-label="FlexRow"  {...props} />

@@ -24,7 +24,7 @@ export function RadioGroup({name, className, disabled, value, onChange, options}
     className = (disabled ? css.disabled : css.radioGroup) + " " + (className ?? "");
 
     return (
-        <div className={className}>
+        <div className={className} aria-label="RadioGroup">
             {
                 options.map((option, idx) => (
                     <label className={css.option} key={idx}>

@@ -14,6 +14,7 @@ export function TextArea({id, value, onChange}: Props) {
             id={id}
             value={value}
             data-testid="textarea"
+            aria-label="TextArea"
             onChange={(e) => onChange(e.target.value)}
         />
     );

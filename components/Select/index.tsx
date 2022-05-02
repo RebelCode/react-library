@@ -129,6 +129,7 @@ export const Select = React.forwardRef<HTMLElement, Props>((props: Props, ref: F
                    menuPlacement="auto"
                    menuPortalTarget={document.body}
                    menuShouldScrollIntoView={true}
+                   aria-label="Select"
         />
     );
 });

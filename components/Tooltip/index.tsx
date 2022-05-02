@@ -62,11 +62,11 @@ export default function Tooltip({visible, delay, placement, theme, children}: Pr
   )
 
   return (
-    <Manager>
+    <Manager aria-label="Tooltip">
       <Reference>
         {(props) => children[0](props)}
       </Reference>
-      <Popper placement={placement} modifiers={modifiers} positionFixed={true}>
+      <Popper placement={placement} modifiers={modifiers} positionFixed={true} aria-label="Tooltip">
         {
           ({ref, style, placement, arrowProps}) => !showTooltip ? null : (
             ReactDOM.createPortal(
@@ -74,8 +74,9 @@ export default function Tooltip({visible, delay, placement, theme, children}: Pr
                 ref={ref}
                 className={classList(css.root, theme!.root as string)}
                 style={style}
+                aria-label="Tooltip"
                 tabIndex={-1}>
-                <div className={containerClass} data-placement={placement}>
+                <div className={containerClass} data-placement={placement} aria-label="Tooltip" >
                   <div className={classList(css.content, theme!.content as string)}>
                     {children[1]}
                   </div>
@@ -83,7 +84,7 @@ export default function Tooltip({visible, delay, placement, theme, children}: Pr
                     className={arrowClass}
                     ref={arrowProps.ref}
                     style={arrowProps.style}
-                    data-placement={placement} />
+                    data-placement={placement} aria-label="Tooltip"/>
                 </div>
               </div>,
               document.body,

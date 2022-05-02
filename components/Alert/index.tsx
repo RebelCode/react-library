@@ -52,7 +52,7 @@ export function Alert({
   );
   
   return dismissed ? null : (
-    <div className={fullClassName} style={style}>
+    <div className={fullClassName} style={style} aria-label="Alert">
       {showIcon && (
         <Dashicon className={css.icon} icon={getIconFor(type)} />
       )}

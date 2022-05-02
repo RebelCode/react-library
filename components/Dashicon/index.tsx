@@ -2,7 +2,7 @@ import React, {HTMLAttributes} from "react";
 import {classList} from "../../utils/classes";
 
 export const Dashicon = ({icon, className, ...rest}: Props) => (
-    <span className={classList("dashicons", "dashicons-" + icon, className as string)} {...rest} />
+    <span className={classList("dashicons", "dashicons-" + icon, className as string)} aria-label="Dashicon" {...rest} />
 );
 
 export interface Props extends HTMLAttributes<HTMLSpanElement> {

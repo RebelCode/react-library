@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlexRow should take a snapshot 1`] = `
+<DocumentFragment>
+  <div
+    aria-label="FlexRow"
+    style="display: flex; flex-flow: row nowrap; justify-content: flex-start; align-items: center;"
+  >
+    <div
+      aria-label="FlexColumn"
+      style="display: flex; flex-flow: column nowrap; justify-content: flex-start; align-items: center;"
+    >
+      <a
+        href=""
+      >
+        One
+      </a>
+      <a
+        href=""
+      >
+        Two
+      </a>
+    </div>
+    <div
+      aria-label="FlexColumn"
+      style="display: flex; flex-flow: column nowrap; justify-content: flex-start; align-items: center;"
+    >
+      <a
+        href=""
+      >
+        Three
+      </a>
+      <a
+        href=""
+      >
+        Four
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;

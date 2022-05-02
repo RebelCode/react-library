@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlexColumn should take a snapshot 1`] = `
+<DocumentFragment>
+  <div
+    aria-label="FlexColumn"
+    style="display: flex; flex-flow: column nowrap; justify-content: flex-start; align-items: flex-start;"
+  >
+    <a
+      href=""
+    >
+      Go to Posts
+    </a>
+    <a
+      href=""
+    >
+      Go to Posts
+    </a>
+  </div>
+</DocumentFragment>
+`;

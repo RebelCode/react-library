@@ -6,7 +6,7 @@ export type Props = HTMLAttributes<HTMLDivElement> & {};
 
 export function Square({className, children, ...props}: Props) {
     return (
-        <div className={classList(css.filler, className as string)} {...props}>
+        <div className={classList(css.filler, className as string)} aria-label="Square" {...props}>
             <div className={css.positioner}>
                 {children}
             </div>

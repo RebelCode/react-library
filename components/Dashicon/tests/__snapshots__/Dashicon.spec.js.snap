@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashicon should take a snapshot 1`] = `
+<DocumentFragment>
+  <span
+    aria-label="Dashicon"
+    class="dashicons dashicons-menu"
+  />
+</DocumentFragment>
+`;
