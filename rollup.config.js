@@ -58,7 +58,6 @@ export default [
         ],
       }),
       postcss({
-        writeDefinitions: true,
         extract: true,
         plugins: [
           autoprefixer(),
