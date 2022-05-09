@@ -25,7 +25,7 @@
     "components",
     "declarations.d.ts",
     "*.ts",
-    "**/*.tsx",
+    "**/*.tsx", "icons",
   ],
   "exclude": [
       "node_modules",
