@@ -16,4 +16,12 @@ describe("Checkbox", () => {
 
     expect(queryByLabelText("Checkbox")).toBeTruthy();
   });
+
+  it("renders text correctly", () => {
+    const { queryByLabelText } = render(
+      <Checkbox onChange={() => {}} />
+    );
+
+    expect(queryByLabelText("Checkbox")).toBeTruthy();
+  });
 });
