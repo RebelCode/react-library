@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Skeleton should take a snapshot 1`] = `
+<DocumentFragment>
+  <div
+    aria-label="Skeleton"
+    class="loading"
+  >
+    <h1>
+      One
+    </h1>
+    <h1>
+      Two
+    </h1>
+  </div>
+</DocumentFragment>
+`;

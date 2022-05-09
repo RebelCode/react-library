@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table should take a snapshot 1`] = `
+<DocumentFragment>
+  <table
+    aria-label="Table"
+    class="table"
+  >
+    <thead
+      class="header"
+    >
+      <tr>
+        <th
+          class="colHeading alignLeft"
+        >
+          Name
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        class="row"
+      >
+        <td
+          class="cell alignLeft"
+        >
+          <h1>
+            col
+          </h1>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;

@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CircleImage should take a snapshot 1`] = `
+<DocumentFragment>
+  <img
+    aria-label="CircleImage"
+    class="image "
+  />
+</DocumentFragment>
+`;
