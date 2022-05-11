@@ -1,5 +1,6 @@
 import React, {ReactNode} from "react";
 import { classList } from "../../utils/classes";
+import "../../styles/colors.pcss";
 import css from "./Table.pcss";
 
 interface Props<T> {

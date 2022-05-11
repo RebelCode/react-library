@@ -5,14 +5,14 @@ exports[`Skeleton should take a snapshot 1`] = `
   <div
     aria-label="Masonry"
     class="root"
-    style="grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 0;"
+    style="grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 2px;"
   >
     <div
       class="column"
     >
       <div
         class="cell"
-        style="margin-bottom: 0px;"
+        style="margin-bottom: 2px;"
       >
         <h1>
           One
@@ -24,7 +24,7 @@ exports[`Skeleton should take a snapshot 1`] = `
     >
       <div
         class="cell"
-        style="margin-bottom: 0px;"
+        style="margin-bottom: 2px;"
       >
         <h1>
           Two

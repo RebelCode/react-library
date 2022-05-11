@@ -15,4 +15,7 @@ export default {
 const Template: ComponentStory<typeof Masonry> = (args) => <Masonry {...args} />;
 
 export const Intial = Template.bind({});
-Intial.args = {};
+Intial.args = {
+  children: [<h1>One</h1>, <h1>Two</h1>],
+  columns:2
+};
