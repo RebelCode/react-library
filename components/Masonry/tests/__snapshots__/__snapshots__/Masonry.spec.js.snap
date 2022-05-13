@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Skeleton should take a snapshot 1`] = `
+<DocumentFragment>
+  <div
+    aria-label="Masonry"
+    class="root"
+    style="grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 2px;"
+  >
+    <div
+      class="column"
+    >
+      <div
+        class="cell"
+        style="margin-bottom: 2px;"
+      >
+        <h1>
+          One
+        </h1>
+      </div>
+    </div>
+    <div
+      class="column"
+    >
+      <div
+        class="cell"
+        style="margin-bottom: 2px;"
+      >
+        <h1>
+          Two
+        </h1>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

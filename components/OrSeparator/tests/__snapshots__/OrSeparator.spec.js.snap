@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrSeparator should take a snapshot 1`] = `
+<DocumentFragment>
+  <div
+    aria-label="OrSeparator"
+    class="container"
+    style="display: flex; flex-flow: row nowrap; justify-content: center; align-items: center;"
+  >
+    <div
+      class="line"
+    />
+    <span
+      class="text"
+    >
+      OR
+    </span>
+    <div
+      class="line"
+    />
+  </div>
+</DocumentFragment>
+`;

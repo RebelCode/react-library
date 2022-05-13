@@ -1,0 +1,3 @@
+import React from "react";
+
+export const ExitIcon = <path xmlns="http://www.w3.org/2000/svg" d="M0.664551 10L3.84473 5.14404L0.962891 0.694336H3.15918L5.02539 3.68408L6.85352 0.694336H9.03076L6.13623 5.21387L9.31641 10H7.05029L4.9873 6.78174L2.91797 10H0.664551Z" fill="currentColor"/>;

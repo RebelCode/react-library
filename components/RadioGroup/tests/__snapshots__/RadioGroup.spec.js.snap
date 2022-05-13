@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadioGroup should take a snapshot 1`] = `
+<DocumentFragment>
+  <div
+    aria-label="RadioGroup"
+    class="radioGroup "
+  >
+    <label
+      class="option"
+    >
+      <input
+        checked=""
+        name="multiChoice"
+        type="radio"
+        value="multipleDaily"
+      />
+      <span>
+        Multiple times a day.
+      </span>
+    </label>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Skeleton should take a snapshot 1`] = `
+<DocumentFragment>
+  <span
+    aria-label="WpLoadingSpinner"
+    class="loading-spinner"
+    style="width: 24px; height: 24px; box-shadow: 6px 0 0 9px #999 inset;"
+  />
+</DocumentFragment>
+`;

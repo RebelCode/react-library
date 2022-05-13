@@ -1,0 +1,7 @@
+{
+  "testRegex": "((\\.|/*.)(spec))\\.js?$",
+  "moduleNameMapper": {
+    "\\.(css|less|scss|pcss|sass)$": "identity-obj-proxy"
+  },
+  "testEnvironment": "jsdom"
+}

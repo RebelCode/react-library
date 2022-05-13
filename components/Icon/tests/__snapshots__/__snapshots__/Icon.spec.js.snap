@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon should take a snapshot 1`] = `
+<DocumentFragment>
+  <svg
+    aria-label="Icon"
+    fill="currentColor"
+    viewBox="0 0 20 20"
+  >
+    <g />
+  </svg>
+</DocumentFragment>
+`;

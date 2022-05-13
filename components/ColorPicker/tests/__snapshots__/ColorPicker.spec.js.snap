@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorPicker should take a snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="button"
+  >
+    <span
+      aria-label="ColorPicker"
+      class="colorPreview"
+      data-testid="colorpicker"
+      style="background-color: rgb(255, 255, 255);"
+    />
+  </button>
+</DocumentFragment>
+`;

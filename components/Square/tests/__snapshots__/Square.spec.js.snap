@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Square should take a snapshot 1`] = `
+<DocumentFragment>
+  <div
+    aria-label="Square"
+    class="filler"
+  >
+    <div
+      class="positioner"
+    >
+      <div>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+        </p>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
